@@ -8,6 +8,9 @@ foundry.veil.api.client.necromancer.animation
 foundry.veil.api.client.necromancer.animation.keyframe
 foundry.veil.api.client.necromancer.constraint
 foundry.veil.api.client.necromancer.render
+foundry.veil.api.client.property
+foundry.veil.api.client.property.model
+foundry.veil.api.client.property.properties
 foundry.veil.api.client.registry
 foundry.veil.api.client.render
 foundry.veil.api.client.render.dynamicbuffer
@@ -34,6 +37,13 @@ foundry.veil.api.client.render.vertex
 foundry.veil.api.client.util
 foundry.veil.api.compat
 foundry.veil.api.event
+foundry.veil.api.flare
+foundry.veil.api.flare.data
+foundry.veil.api.flare.data.effect
+foundry.veil.api.flare.data.model
+foundry.veil.api.flare.model
+foundry.veil.api.flare.modifier
+foundry.veil.api.flare.modifier.modifiers
 foundry.veil.api.molang
 foundry.veil.api.network
 foundry.veil.api.network.handler
@@ -84,6 +94,7 @@ foundry.veil.impl.client.render.shader.uniform
 foundry.veil.impl.client.render.vertex
 foundry.veil.impl.client.render.wrapper
 foundry.veil.impl.compat.sodium
+foundry.veil.impl.flare
 foundry.veil.impl.network
 foundry.veil.impl.quasar
 foundry.veil.impl.resource
