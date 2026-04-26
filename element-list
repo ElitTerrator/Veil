@@ -93,6 +93,7 @@ foundry.veil.impl.client.render.shader.program
 foundry.veil.impl.client.render.shader.uniform
 foundry.veil.impl.client.render.vertex
 foundry.veil.impl.client.render.wrapper
+foundry.veil.impl.command
 foundry.veil.impl.compat.sodium
 foundry.veil.impl.flare
 foundry.veil.impl.network
@@ -101,6 +102,7 @@ foundry.veil.impl.resource
 foundry.veil.impl.resource.action
 foundry.veil.impl.resource.loader
 foundry.veil.impl.resource.tree
+foundry.veil.mixin.command.client
 foundry.veil.mixin.debug
 foundry.veil.mixin.debug.accessor
 foundry.veil.mixin.debug.client
@@ -109,8 +111,8 @@ foundry.veil.mixin.dynamicbuffer.accessor
 foundry.veil.mixin.dynamicbuffer.client
 foundry.veil.mixin.fix
 foundry.veil.mixin.framebuffer.accessor
-foundry.veil.mixin.imgui.client
 foundry.veil.mixin.necromancer.client
+foundry.veil.mixin.network
 foundry.veil.mixin.performance.client
 foundry.veil.mixin.perspective.accessor
 foundry.veil.mixin.perspective.client
