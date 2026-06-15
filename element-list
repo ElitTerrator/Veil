@@ -87,7 +87,8 @@ foundry.veil.impl.client.render.rendertype
 foundry.veil.impl.client.render.shader
 foundry.veil.impl.client.render.shader.block
 foundry.veil.impl.client.render.shader.compiler
-foundry.veil.impl.client.render.shader.modifier
+foundry.veil.impl.client.render.shader.injection
+foundry.veil.impl.client.render.shader.injection.util
 foundry.veil.impl.client.render.shader.processor
 foundry.veil.impl.client.render.shader.program
 foundry.veil.impl.client.render.shader.uniform
