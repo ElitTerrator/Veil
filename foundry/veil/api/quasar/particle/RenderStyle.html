@@ -132,8 +132,14 @@ implements org.lwjgl.system.NativeResource</span></div>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code>static final com.mojang.serialization.Codec<wbr>&lt;<a href="RenderStyle.html" title="class in foundry.veil.api.quasar.particle">RenderStyle</a>&gt;</code></div>
-<div class="col-second even-row-color"><code><a href="#CODEC" class="member-name-link">CODEC</a></code></div>
+<div class="col-first even-row-color"><code>protected final int</code></div>
+<div class="col-second even-row-color"><code><a href="#bufferSize" class="member-name-link">bufferSize</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final com.mojang.serialization.Codec<wbr>&lt;<a href="RenderStyle.html" title="class in foundry.veil.api.quasar.particle">RenderStyle</a>&gt;</code></div>
+<div class="col-second odd-row-color"><code><a href="#CODEC" class="member-name-link">CODEC</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>protected int</code></div>
+<div class="col-second even-row-color"><code><a href="#instanceVBO" class="member-name-link">instanceVBO</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>protected int</code></div>
 <div class="col-second odd-row-color"><code><a href="#maxParticles" class="member-name-link">maxParticles</a></code></div>
@@ -141,6 +147,9 @@ implements org.lwjgl.system.NativeResource</span></div>
 <div class="col-first even-row-color"><code>static final int</code></div>
 <div class="col-second even-row-color"><code><a href="#MIN_PARTICLES" class="member-name-link">MIN_PARTICLES</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>protected <a href="../../client/render/vertex/VertexArray.html" title="class in foundry.veil.api.client.render.vertex">VertexArray</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#vertexArray" class="member-name-link">vertexArray</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 </section>
 </li>
@@ -238,6 +247,24 @@ implements org.lwjgl.system.NativeResource</span></div>
 </section>
 </li>
 <li>
+<section class="detail" id="vertexArray">
+<h3>vertexArray</h3>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="../../client/render/vertex/VertexArray.html" title="class in foundry.veil.api.client.render.vertex">VertexArray</a></span>&nbsp;<span class="element-name">vertexArray</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="instanceVBO">
+<h3>instanceVBO</h3>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">instanceVBO</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="bufferSize">
+<h3>bufferSize</h3>
+<div class="member-signature"><span class="modifiers">protected final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">bufferSize</span></div>
+</section>
+</li>
+<li>
 <section class="detail" id="maxParticles">
 <h3>maxParticles</h3>
 <div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">maxParticles</span></div>
@@ -284,6 +311,10 @@ implements org.lwjgl.system.NativeResource</span></div>
 <h3>init</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">init</span>()</div>
 <div class="block">Called after the Veil renderer is available, sets up anything necessary for rendering.</div>
+<dl class="notes">
+<dt>Since:</dt>
+<dd>4.4.0</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -322,6 +353,8 @@ implements org.lwjgl.system.NativeResource</span></div>
 <dt>Parameters:</dt>
 <dd><code>particles</code> - A list of currently active particles</dd>
 <dd><code>camera</code> - The camera to use to render the particles</dd>
+<dt>Since:</dt>
+<dd>4.4.0</dd>
 </dl>
 </section>
 </li>
@@ -361,6 +394,8 @@ implements org.lwjgl.system.NativeResource</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>The MeshData to use for each particle.</dd>
+<dt>Since:</dt>
+<dd>4.4.0</dd>
 </dl>
 </section>
 </li>
@@ -372,6 +407,8 @@ implements org.lwjgl.system.NativeResource</span></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - The builder associated with the VertexArray</dd>
+<dt>Since:</dt>
+<dd>4.4.0</dd>
 </dl>
 </section>
 </li>
@@ -387,6 +424,8 @@ implements org.lwjgl.system.NativeResource</span></div>
 <dd><code>particle</code> - The particle being loaded</dd>
 <dd><code>camera</code> - The camera rendering the particles</dd>
 <dd><code>buffer</code> - The buffer of the current VertexArray</dd>
+<dt>Since:</dt>
+<dd>4.4.0</dd>
 </dl>
 </section>
 </li>
