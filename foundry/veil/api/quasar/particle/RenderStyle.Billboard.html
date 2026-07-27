@@ -5,7 +5,7 @@
 <title>RenderStyle.Billboard (common 4.3.0 API)</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="description" content="declaration: package: foundry.veil.api.quasar.particle, interface: RenderStyle, class: Billboard">
+<meta name="description" content="declaration: package: foundry.veil.api.quasar.particle, class: RenderStyle, class: Billboard">
 <meta name="generator" content="javadoc/ClassWriterImpl">
 <link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
 <link rel="stylesheet" type="text/css" href="../../../../../script-dir/jquery-ui.min.css" title="Style">
@@ -86,22 +86,23 @@ loadScripts(document, 'script');</script>
 <h1 title="Class RenderStyle.Billboard" class="title">Class RenderStyle.Billboard</h1>
 </div>
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
+<div class="inheritance"><a href="RenderStyle.html" title="class in foundry.veil.api.quasar.particle">foundry.veil.api.quasar.particle.RenderStyle</a>
 <div class="inheritance">foundry.veil.api.quasar.particle.RenderStyle.Billboard</div>
+</div>
 </div>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="RenderStyle.html" title="interface in foundry.veil.api.quasar.particle">RenderStyle</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code>org.lwjgl.system.NativeResource</code></dd>
 </dl>
 <dl class="notes">
-<dt>Enclosing interface:</dt>
-<dd><code><a href="RenderStyle.html" title="interface in foundry.veil.api.quasar.particle">RenderStyle</a></code></dd>
+<dt>Enclosing class:</dt>
+<dd><code><a href="RenderStyle.html" title="class in foundry.veil.api.quasar.particle">RenderStyle</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="annotations">@Internal
 </span><span class="modifiers">public static final class </span><span class="element-name type-name-label">RenderStyle.Billboard</span>
-<span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
-implements <a href="RenderStyle.html" title="interface in foundry.veil.api.quasar.particle">RenderStyle</a></span></div>
+<span class="extends-implements">extends <a href="RenderStyle.html" title="class in foundry.veil.api.quasar.particle">RenderStyle</a></span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -110,7 +111,7 @@ implements <a href="RenderStyle.html" title="interface in foundry.veil.api.quasa
 <section class="nested-class-summary" id="nested-class-summary">
 <h2>Nested Class Summary</h2>
 <div class="inherited-list">
-<h2 id="nested-classes-inherited-from-class-foundry.veil.api.quasar.particle.RenderStyle">Nested classes/interfaces inherited from interface&nbsp;foundry.veil.api.quasar.particle.<a href="RenderStyle.html" title="interface in foundry.veil.api.quasar.particle">RenderStyle</a></h2>
+<h2 id="nested-classes-inherited-from-class-foundry.veil.api.quasar.particle.RenderStyle">Nested classes/interfaces inherited from class&nbsp;foundry.veil.api.quasar.particle.<a href="RenderStyle.html" title="class in foundry.veil.api.quasar.particle">RenderStyle</a></h2>
 <code><a href="RenderStyle.Billboard.html" title="class in foundry.veil.api.quasar.particle">RenderStyle.Billboard</a>, <a href="RenderStyle.Cube.html" title="class in foundry.veil.api.quasar.particle">RenderStyle.Cube</a></code></div>
 </section>
 </li>
@@ -119,8 +120,8 @@ implements <a href="RenderStyle.html" title="interface in foundry.veil.api.quasa
 <section class="field-summary" id="field-summary">
 <h2>Field Summary</h2>
 <div class="inherited-list">
-<h3 id="fields-inherited-from-class-foundry.veil.api.quasar.particle.RenderStyle">Fields inherited from interface&nbsp;foundry.veil.api.quasar.particle.<a href="RenderStyle.html" title="interface in foundry.veil.api.quasar.particle">RenderStyle</a></h3>
-<code><a href="RenderStyle.html#CODEC">CODEC</a></code></div>
+<h3 id="fields-inherited-from-class-foundry.veil.api.quasar.particle.RenderStyle">Fields inherited from class&nbsp;foundry.veil.api.quasar.particle.<a href="RenderStyle.html" title="class in foundry.veil.api.quasar.particle">RenderStyle</a></h3>
+<code><a href="RenderStyle.html#CODEC">CODEC</a>, <a href="RenderStyle.html#maxParticles">maxParticles</a>, <a href="RenderStyle.html#MIN_PARTICLES">MIN_PARTICLES</a></code></div>
 </section>
 </li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
@@ -147,26 +148,33 @@ implements <a href="RenderStyle.html" title="interface in foundry.veil.api.quasa
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#render(foundry.veil.api.client.render.MatrixStack,foundry.veil.api.quasar.particle.QuasarParticle,foundry.veil.api.quasar.particle.RenderData,org.joml.Vector3fc,com.mojang.blaze3d.vertex.VertexConsumer,double,float)" class="member-name-link">render</a><wbr>(<a href="../../client/render/MatrixStack.html" title="interface in foundry.veil.api.client.render">MatrixStack</a>&nbsp;matrixStack,
- <a href="QuasarParticle.html" title="class in foundry.veil.api.quasar.particle">QuasarParticle</a>&nbsp;particle,
- <a href="RenderData.html" title="class in foundry.veil.api.quasar.particle">RenderData</a>&nbsp;renderData,
- org.joml.Vector3fc&nbsp;renderOffset,
- com.mojang.blaze3d.vertex.VertexConsumer&nbsp;builder,
- double&nbsp;ageModifier,
- float&nbsp;partialTicks)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected com.mojang.blaze3d.vertex.MeshData</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createMesh()" class="member-name-link">createMesh</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#putBufferData(foundry.veil.api.quasar.particle.QuasarParticle,net.minecraft.client.Camera,java.nio.ByteBuffer)" class="member-name-link">putBufferData</a><wbr>(<a href="QuasarParticle.html" title="class in foundry.veil.api.quasar.particle">QuasarParticle</a>&nbsp;particle,
+ net.minecraft.client.Camera&nbsp;camera,
+ <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a>&nbsp;buffer)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Put information about each particle into the vertex attribute array.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setupBufferState(foundry.veil.api.client.render.vertex.VertexArrayBuilder)" class="member-name-link">setupBufferState</a><wbr>(<a href="../../client/render/vertex/VertexArrayBuilder.html" title="interface in foundry.veil.api.client.render.vertex">VertexArrayBuilder</a>&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Draws a single particle.</div>
+<div class="block">Set up the vertex attribute arrays to use for each particle.</div>
 </div>
 </div>
 </div>
 </div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-foundry.veil.api.quasar.particle.RenderStyle">Methods inherited from class&nbsp;foundry.veil.api.quasar.particle.<a href="RenderStyle.html" title="class in foundry.veil.api.quasar.particle">RenderStyle</a></h3>
+<code><a href="RenderStyle.html#clear()">clear</a>, <a href="RenderStyle.html#free()">free</a>, <a href="RenderStyle.html#getRenderType(foundry.veil.api.quasar.particle.QuasarParticle,foundry.veil.api.quasar.particle.RenderData)">getRenderType</a>, <a href="RenderStyle.html#init()">init</a>, <a href="RenderStyle.html#render(java.util.List,net.minecraft.client.Camera)">render</a>, <a href="RenderStyle.html#setup(int)">setup</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
 <div class="inherited-list">
-<h3 id="methods-inherited-from-class-foundry.veil.api.quasar.particle.RenderStyle">Methods inherited from interface&nbsp;foundry.veil.api.quasar.particle.<a href="RenderStyle.html" title="interface in foundry.veil.api.quasar.particle">RenderStyle</a></h3>
-<code><a href="RenderStyle.html#clear()">clear</a>, <a href="RenderStyle.html#getRenderType(foundry.veil.api.quasar.particle.QuasarParticle,foundry.veil.api.quasar.particle.RenderData)">getRenderType</a>, <a href="RenderStyle.html#setup(int)">setup</a></code></div>
+<h3 id="methods-inherited-from-class-org.lwjgl.system.NativeResource">Methods inherited from interface&nbsp;org.lwjgl.system.NativeResource</h3>
+<code>close</code></div>
 </section>
 </li>
 </ul>
@@ -193,27 +201,46 @@ implements <a href="RenderStyle.html" title="interface in foundry.veil.api.quasa
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="render(foundry.veil.api.client.render.MatrixStack,foundry.veil.api.quasar.particle.QuasarParticle,foundry.veil.api.quasar.particle.RenderData,org.joml.Vector3fc,com.mojang.blaze3d.vertex.VertexConsumer,double,float)">
-<h3>render</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">render</span><wbr><span class="parameters">(<a href="../../client/render/MatrixStack.html" title="interface in foundry.veil.api.client.render">MatrixStack</a>&nbsp;matrixStack,
- <a href="QuasarParticle.html" title="class in foundry.veil.api.quasar.particle">QuasarParticle</a>&nbsp;particle,
- <a href="RenderData.html" title="class in foundry.veil.api.quasar.particle">RenderData</a>&nbsp;renderData,
- org.joml.Vector3fc&nbsp;renderOffset,
- com.mojang.blaze3d.vertex.VertexConsumer&nbsp;builder,
- double&nbsp;ageModifier,
- float&nbsp;partialTicks)</span></div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="RenderStyle.html#render(foundry.veil.api.client.render.MatrixStack,foundry.veil.api.quasar.particle.QuasarParticle,foundry.veil.api.quasar.particle.RenderData,org.joml.Vector3fc,com.mojang.blaze3d.vertex.VertexConsumer,double,float)">RenderStyle</a></code></span></div>
-<div class="block">Draws a single particle.</div>
+<section class="detail" id="createMesh()">
+<h3>createMesh</h3>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">com.mojang.blaze3d.vertex.MeshData</span>&nbsp;<span class="element-name">createMesh</span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="RenderStyle.html#render(foundry.veil.api.client.render.MatrixStack,foundry.veil.api.quasar.particle.QuasarParticle,foundry.veil.api.quasar.particle.RenderData,org.joml.Vector3fc,com.mojang.blaze3d.vertex.VertexConsumer,double,float)">render</a></code>&nbsp;in interface&nbsp;<code><a href="RenderStyle.html" title="interface in foundry.veil.api.quasar.particle">RenderStyle</a></code></dd>
+<dd><code><a href="RenderStyle.html#createMesh()">createMesh</a></code>&nbsp;in class&nbsp;<code><a href="RenderStyle.html" title="class in foundry.veil.api.quasar.particle">RenderStyle</a></code></dd>
+<dt>Returns:</dt>
+<dd>The MeshData to use for each particle.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setupBufferState(foundry.veil.api.client.render.vertex.VertexArrayBuilder)">
+<h3>setupBufferState</h3>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setupBufferState</span><wbr><span class="parameters">(<a href="../../client/render/vertex/VertexArrayBuilder.html" title="interface in foundry.veil.api.client.render.vertex">VertexArrayBuilder</a>&nbsp;builder)</span></div>
+<div class="block"><span class="description-from-type-label">Description copied from class:&nbsp;<code><a href="RenderStyle.html#setupBufferState(foundry.veil.api.client.render.vertex.VertexArrayBuilder)">RenderStyle</a></code></span></div>
+<div class="block">Set up the vertex attribute arrays to use for each particle.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="RenderStyle.html#setupBufferState(foundry.veil.api.client.render.vertex.VertexArrayBuilder)">setupBufferState</a></code>&nbsp;in class&nbsp;<code><a href="RenderStyle.html" title="class in foundry.veil.api.quasar.particle">RenderStyle</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>matrixStack</code> - The current stack of matrix transformations</dd>
-<dd><code>particle</code> - The particle to render</dd>
-<dd><code>renderData</code> - The render data associated with that particle</dd>
-<dd><code>renderOffset</code> - The offset from the camera to draw the particle at</dd>
-<dd><code>builder</code> - The vertex consumer to draw into</dd>
-<dd><code>partialTicks</code> - The percentage from last tick to this tick</dd>
+<dd><code>builder</code> - The builder associated with the VertexArray</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="putBufferData(foundry.veil.api.quasar.particle.QuasarParticle,net.minecraft.client.Camera,java.nio.ByteBuffer)">
+<h3>putBufferData</h3>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">putBufferData</span><wbr><span class="parameters">(<a href="QuasarParticle.html" title="class in foundry.veil.api.quasar.particle">QuasarParticle</a>&nbsp;particle,
+ net.minecraft.client.Camera&nbsp;camera,
+ <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a>&nbsp;buffer)</span></div>
+<div class="block"><span class="description-from-type-label">Description copied from class:&nbsp;<code><a href="RenderStyle.html#putBufferData(foundry.veil.api.quasar.particle.QuasarParticle,net.minecraft.client.Camera,java.nio.ByteBuffer)">RenderStyle</a></code></span></div>
+<div class="block">Put information about each particle into the vertex attribute array.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="RenderStyle.html#putBufferData(foundry.veil.api.quasar.particle.QuasarParticle,net.minecraft.client.Camera,java.nio.ByteBuffer)">putBufferData</a></code>&nbsp;in class&nbsp;<code><a href="RenderStyle.html" title="class in foundry.veil.api.quasar.particle">RenderStyle</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>particle</code> - The particle being loaded</dd>
+<dd><code>camera</code> - The camera rendering the particles</dd>
+<dd><code>buffer</code> - The buffer of the current VertexArray</dd>
 </dl>
 </section>
 </li>
