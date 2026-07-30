@@ -127,6 +127,8 @@ foundry.veil.mixin.resource
 foundry.veil.mixin.resource.accessor
 foundry.veil.mixin.resource.client
 foundry.veil.mixin.scheduler
+foundry.veil.mixin.shader_recompile.accessor
+foundry.veil.mixin.shader_recompile.client
 foundry.veil.mixin.shader.client
 foundry.veil.platform
 foundry.veil.platform.registry
