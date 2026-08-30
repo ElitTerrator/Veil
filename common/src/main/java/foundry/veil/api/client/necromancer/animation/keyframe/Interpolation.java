@@ -13,7 +13,23 @@ public enum Interpolation {
     LINEAR(
             (a, b, t) -> Mth.lerp(t, a, b),
             Quaternionfc::slerp
+    ),
+    EASE_IN(
+            (a, b, t) -> MathHelper.lerp(t * t, a, b),
+            (a, b, t, result) -> result.set(a).slerp(b, t * t)
+    ),
+    EASE_OUT(
+            (a, b, t) -> MathHelper.lerp(1F - (1F - t) * (1F - t), a, b),
+            (a, b, t, result) -> result.set(a).slerp(b, 1F - (1F - t) * (1F - t))
+    ),
+    EASE_IN_OUT(
+            (a, b, t) -> MathHelper.lerp(easeInOutT(t), a, b),
+            (a, b, t, result) -> result.set(a).slerp(b, easeInOutT(t))
     );
+
+    private static float easeInOutT(float t) {
+        return t < 0.5F ? 2F * t * t : 1F - (float) Math.pow(-2F * t + 2F, 2) / 2F;
+    }
 
     private final FloatInterpolator fInterpolator;
     private final QuaternionInterpolator qInterpolator;
