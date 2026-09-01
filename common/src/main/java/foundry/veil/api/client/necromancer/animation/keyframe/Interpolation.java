@@ -7,7 +7,7 @@ import org.joml.Quaternionfc;
 // todo: support cubic interpolation w/ derivatives
 public enum Interpolation {
     NEAREST_NEIGHBOR(
-            (a, b, t) -> t < 0.5 ? a : b,
+            (a, b, t) -> t < 1 ? a : b,
             (a, b, t, result) -> result.set(t < 0.5 ? a : b)
     ),
     LINEAR(
