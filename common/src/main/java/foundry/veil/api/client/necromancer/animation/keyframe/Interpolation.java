@@ -6,14 +6,30 @@ import org.joml.Quaternionfc;
 
 // todo: support cubic interpolation w/ derivatives
 public enum Interpolation {
-    NEAREST_NEIGHBOR(
-            (a, b, t) -> t < 0.5 ? a : b,
-            (a, b, t, result) -> result.set(t < 0.5 ? a : b)
+    STEP(
+            (a, b, t) -> t < 1F ? a : b,
+            (a, b, t, result) -> result.set(t < 0.5F ? a : b)
     ),
     LINEAR(
-            (a, b, t) -> Mth.lerp(t, a, b),
+            (a, b, t) -> MathHelper.lerp(t, a, b),
             Quaternionfc::slerp
+    ),
+    EASE_IN(
+            (a, b, t) -> MathHelper.lerp(t * t, a, b),
+            (a, b, t, result) -> result.set(a).slerp(b, t * t)
+    ),
+    EASE_OUT(
+            (a, b, t) -> MathHelper.lerp(1F - (1F - t) * (1F - t), a, b),
+            (a, b, t, result) -> result.set(a).slerp(b, 1F - (1F - t) * (1F - t))
+    ),
+    EASE_IN_OUT(
+            (a, b, t) -> MathHelper.lerp(easeInOut(t), a, b),
+            (a, b, t, result) -> result.set(a).slerp(b, easeInOut(t))
     );
+
+    private static float easeInOut(float t) {
+        return t < 0.5F ? 2F * t * t : 1F - (float) Math.pow(-2F * t + 2F, 2) / 2F;
+    }
 
     private final FloatInterpolator fInterpolator;
     private final QuaternionInterpolator qInterpolator;
